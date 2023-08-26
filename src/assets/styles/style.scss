@@ -1,0 +1,261 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+@mixin content {
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+@mixin namePage {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+    h1 {
+        color: #360434;
+        font-weight: bold;
+    }
+}
+
+@mixin logsig {
+    background-color: #360434;
+    border-radius: 20px;
+    padding: 30px;
+
+    label {
+        color: white;
+        margin: 10px;
+    }
+    input {
+        border-radius: 20px;
+        width: 70%;
+        height: 25px;
+        margin-bottom: 20px;
+        padding: 5px;
+    }
+
+    button {
+        border-radius: 20px;
+        padding: 7px 30px 7px 30px;
+        font-weight: bold;
+    }
+}
+
+@mixin alt {
+    background-color: #360434;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+@mixin footer {
+    width: 100%;
+    background-color: #360434;
+    color: white;
+    padding-bottom: 100px;
+    position: absolute;
+    font-size: 13px;
+    .footerFlex {
+        justify-content: space-between;
+        border-top: 1px solid white;
+        display: flex;
+        
+        p {
+            margin-bottom: 20px;
+        }
+        .footerChild {
+            flex: 1;
+            border-right: 1px solid white;
+            padding: 10px;
+            text-align: center;
+            h1 {
+                margin-bottom: 20px;
+            }
+        }
+        .footerChild:last-child {
+            border-right: none;
+        }
+    }
+    .footerChild2 {
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+
+.container {
+    width: 100%;
+    .content {
+        @include content;
+        
+        .namePage {
+            @include namePage;
+        }
+    
+        .login {
+            @include logsig;
+        }
+    
+        .alt {
+            @include alt;
+        } 
+    }
+    .footer {
+        @include footer;
+    }
+}
+
+.container2 {
+    width: 100%;
+    .content {
+        @include content;
+        .namePage {
+            @include namePage;
+        }
+
+        .signin {
+            @include logsig;
+        }
+
+        .alt {
+            @include alt;
+        }
+    }
+    .footer {
+        @include footer;
+    }
+}
+
+.container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+
+    .header {
+        display: flex;
+        background-color: #360434;
+        color: white;
+        padding: 22px;
+        width: 100%;
+        .logo {
+            font-weight: bold;
+            font-size: 25px;
+            margin-right: 100px;
+            margin-left: 50px;
+        }
+
+        .about {
+            display: flex;
+            font-size: 20px;
+
+            p {
+                margin: 0 90px;
+            }
+        }
+
+        .inputButton {
+            display: flex;
+            input {
+                border-radius: 20px;
+                width: 250px;
+                height: 30px;
+                margin-bottom: 20px;
+                margin-left: 100px;
+                padding: 5px;
+                padding: 10px;
+                color: #360434;
+            }
+        
+            button {
+                border-radius: 20px;
+                padding: 0 30px;
+                font-weight: bold;
+                height: 30px;
+                margin-left: 20px;
+                color: #360434;
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+        .films {
+            border-top: 1px solid;
+            border-bottom: 1px solid;
+            margin-top: 50px;
+            text-align: center;
+            
+        }
+
+        .sevice {
+            display: flex;
+            
+            .buy {
+                width: 30%;
+                border-radius: 20px;
+                margin: 50px;
+                margin-bottom: 100px;
+                flex-direction: column; 
+                text-align: center;
+                
+                .h1 {
+                    background-color: #360434;
+                    color: white;
+                    font-size: 10px;
+                    padding: 10px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        background-color: #360434;
+        color: white;
+        padding-bottom: 100px;
+        bottom: 0;
+        font-size: 13px;
+        position: relative;
+        .footerFlex {
+            justify-content: space-between;
+            border-top: 1px solid white;
+            display: flex;
+            padding: 10px;
+            p {
+                margin-bottom: 20px;
+            }
+            .footerChild {
+                flex: 1;
+                border-right: 1px solid white;
+                padding: 10px;
+                text-align: center;
+                h1 {
+                    margin-bottom: 20px;
+                }
+            }
+            .footerChild:last-child {
+                border-right: none;
+            }
+        }
+        .footerChild2 {
+            text-align: center;
+            margin: 10px;
+        }
+    }
+
+    .footer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-bottom: 100px;
+    }
+}
+
