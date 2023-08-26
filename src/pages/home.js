@@ -1,9 +1,59 @@
-import { useState } from 'react'
+// import React, { useState, useEffect } from 'react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import MovieList from '../component/MoviesList';
+// import MovieListHeading from '../component/MoviesListHeading';
+// import SearchBox from '../component/SearchBox';
+// import AddFavourites from '../component/AddFavourites';
+// import RemoveFavourites from '../component/RemoveFavourites';
 
 export function Home() {
-    const [film, setFilm] = useState([
-        
-    ])
+    // const [movies, setMovies] = useState([]);
+	// const [favourites, setFavourites] = useState([]);
+	// const [searchValue, setSearchValue] = useState('');
+
+	// const getMovieRequest = async (searchValue) => {
+	// 	const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=263d22d8`;
+
+	// 	const response = await fetch(url);
+	// 	const responseJson = await response.json();
+
+	// 	if (responseJson.Search) {
+	// 		setMovies(responseJson.Search);
+	// 	}
+	// };
+
+	// useEffect(() => {
+	// 	getMovieRequest(searchValue);
+	// }, [searchValue]);
+
+	// useEffect(() => {
+	// 	const movieFavourites = JSON.parse(
+	// 		localStorage.getItem('react-movie-app-favourites')
+	// 	);
+
+	// 	if (movieFavourites) {
+	// 		setFavourites(movieFavourites);
+	// 	}
+	// }, []);
+
+	// const saveToLocalStorage = (items) => {
+	// 	localStorage.setItem('react-movie-app-favourites', JSON.stringify(items));
+	// };
+
+	// const addFavouriteMovie = (movie) => {
+	// 	const newFavouriteList = [...favourites, movie];
+	// 	setFavourites(newFavouriteList);
+	// 	saveToLocalStorage(newFavouriteList);
+	// };
+
+	// const removeFavouriteMovie = (movie) => {
+	// 	const newFavouriteList = favourites.filter(
+	// 		(favourite) => favourite.imdbID !== movie.imdbID
+	// 	);
+
+	// 	setFavourites(newFavouriteList);
+	// 	saveToLocalStorage(newFavouriteList);
+	// };
 
     
 
@@ -20,6 +70,7 @@ export function Home() {
                 </div>
 
                 <div className="inputButton">
+                    {/* <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} /> */}
                     <input/>
                     <button>add FILM</button>
                 </div>
@@ -28,10 +79,28 @@ export function Home() {
             <div className="main">
                 
 
-                <div className="films">
-                    <h1>Films for you</h1>
-                    
+            {/* <div className='container-fluid movie-app'>
+                <div className='row d-flex align-items-center mt-4 mb-4'>
+                    <MovieListHeading heading='Movies' />
                 </div>
+                <div className='row'>
+                    <MovieList
+                        movies={movies}
+                        handleFavouritesClick={addFavouriteMovie}
+                        favouriteComponent={AddFavourites}
+                    />
+                </div>
+                <div className='row d-flex align-items-center mt-4 mb-4'>
+                    <MovieListHeading heading='Favourites' />
+                </div>
+                <div className='row'>
+                    <MovieList
+                        movies={favourites}
+                        handleFavouritesClick={removeFavouriteMovie}
+                        favouriteComponent={RemoveFavourites}
+                    />
+                </div>
+            </div> */}
 
                 <div className="sevice">
                     <div className='buy'>
