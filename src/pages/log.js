@@ -1,8 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { Button } from "../component/customButton";
+import { Input } from "../component/customInput";
 
-
-export function LogIN({ users }) {
+export function LogIN() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -36,16 +37,17 @@ export function LogIN({ users }) {
 
                 <div className="login">
                     <label>email</label><br/>
-                    <input  
+                    <Input  
                         onChange={handleEmailChange}
+                        type={email}
                     /><br/>
 
                     <label>Password</label><br/>
-                    <input
+                    <Input
                         onChange={handlePasswordChange}
                     /><br/>
 
-                    <button onClick={handleLogin}>Login</button>
+                    <Button onClick={handleLogin} text={"Login"}/>
                 </div>
 
                 <div className="alt">

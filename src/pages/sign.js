@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-
+import { Button } from "../component/customButton";
+import { Input } from "../component/customInput";
 export function SignIN({ users }) {
     const [list, setList] = useState([]);
     const [inputValue1, setInputValue1] = useState('');
@@ -37,7 +37,7 @@ export function SignIN({ users }) {
     };
 
     const isValidPhoneNumber = (phoneNumber) => {
-        const phoneRegex = /^\d{10}$/;
+        const phoneRegex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
         
         return phoneRegex.test(phoneNumber);
     };
@@ -100,36 +100,37 @@ export function SignIN({ users }) {
                 <div className="signin">
                     <form>
                         <label>username</label><br/>
-                        <input
+                        <Input
                             value={inputValue1}
                             onChange={InputChange1}
                         /><br/>
 
                         <label>email</label><br/>
-                        <input
+                        <Input
+                            type={"email"}
                             value={inputValue2}
                             onChange={InputChange2}
                         /><br/>
 
                         <label>number</label><br/>
-                        <input
+                        <Input
                             value={inputValue3}
                             onChange={InputChange3}
                         /><br/>
 
                         <label>password</label><br/>
-                        <input
+                        <Input
                             value={inputValue4}
                             onChange={InputChange4}
                         /><br/>
 
                         <label>confirm password</label><br/>
-                        <input
+                        <Input
                             value={inputValue5}
                             onChange={InputChange5}
                         /><br/>
 
-                        <button onClick={signInButton}>sign in</button>
+                        <Button onClick={signInButton} text={"sign in"}/>
                     </form>
                 </div>
 
